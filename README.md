@@ -1,5 +1,10 @@
 # PoC of Android
 
+## memo
+Kotlinにて、MVVM実装やいくつかのライブラリの実装勘を磨くための練習用
+アイコンなど一部の画像ファイルは未コミット、なのでgit cloneしただけではビルド不可
+名称なども適当
+
 ## Overview
 - Resource files added by Android Studio plugin.  
 [Android Drawable Importer](https://plugins.jetbrains.com/plugin/7658-android-drawable-importer)  
