@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <ScrollView
+            android:id="@+id/contactInfoScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/contactMessageTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_middle"
+                    android:text="@string/text_contact_message"
+                    android:textColor="@android:color/black" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/contact_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/cd_person_list"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <ImageView
+                    android:id="@+id/addContactImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/text_none"
+                    android:paddingStart="@dimen/margin_middle"
+                    android:paddingTop="@dimen/margin_middle"
+                    android:paddingEnd="@dimen/margin_middle"
+                    android:src="@drawable/add" />
+
+                <TextView
+                    android:id="@+id/addContactTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_middle"
+                    android:gravity="center"
+                    android:text="@string/text_add_contact"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/contactInfoGoToTopImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:contentDescription="@string/text_none"
+            android:padding="@dimen/margin_middle"
+            android:src="@drawable/back_to_top"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+</layout>
