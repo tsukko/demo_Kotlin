@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ activityなしのスプラッシュ
+  ~ 長所
+    起動時間が通常とほぼ変わらない
+    既存のアプリに追加しやすい
+    起動時に数瞬ブランクが表示されない
+
+  ~ 短所
+    事前の処理が行えない
+    表現できることに制約がある
+  -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+
+    <item android:drawable="@color/background_light_gray" />
+
+    <!--<item android:gravity="center">-->
+    <!--<bitmap-->
+    <!--android:gravity="center"-->
+    <!--android:src="@mipmap/ic_launcher" />-->
+    <!--</item>-->
+    <!--<item-->
+    <!--android:bottom="@dimen/large_margin"-->
+    <!--android:gravity="bottom">-->
+    <!--<bitmap-->
+    <!--android:gravity="center"-->
+    <!--android:src="@mipmap/ic_launcher" />-->
+    <!--</item>-->
+
+</layer-list>

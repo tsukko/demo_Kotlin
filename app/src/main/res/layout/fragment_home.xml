@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light_gray"
+    android:backgroundTint="@drawable/translucent"
+    android:backgroundTintMode="src_atop">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/topLineView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:id="@+id/profileRegistrationLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/profileRegistrationImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_large"
+                android:contentDescription="@string/text_none"
+                android:src="@drawable/setting_profile" />
+
+            <TextView
+                android:id="@+id/profileRegistrationTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/text_profile_registration"
+                android:textColor="@color/colorTextBase" />
+
+            <ImageView
+                android:id="@+id/profileRegistrationImageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/margin_middle"
+                android:contentDescription="@string/text_none"
+                android:src="@drawable/arrow_right" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/profileRegistrationLineView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:id="@+id/settingNoticeLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/settingNoticeImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_large"
+                android:contentDescription="@string/text_none"
+                android:src="@drawable/setting_notice" />
+
+            <TextView
+                android:id="@+id/settingNoticeTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/text_setting_notice"
+                android:textColor="@color/colorTextBase" />
+
+            <ImageView
+                android:id="@+id/settingNoticeImageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/margin_middle"
+                android:contentDescription="@string/text_none"
+                android:src="@drawable/arrow_right" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/settingNoticeLineView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:id="@+id/homeAddContractLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/homeAddContractImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_large"
+                android:contentDescription="@string/text_none"
+                android:src="@drawable/setting_add" />
+
+            <TextView
+                android:id="@+id/homeAddContractTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/text_add_contract"
+                android:textColor="@color/colorTextBase" />
+
+            <ImageView
+                android:id="@+id/homeAddContractImageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/margin_middle"
+                android:contentDescription="@string/text_none"
+                android:src="@drawable/arrow_right" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/homeAddContractLineView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+    </LinearLayout>
+</FrameLayout>

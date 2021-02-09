@@ -1,0 +1,221 @@
+<resources>
+    <string name="app_name">Kotlinサンプル</string>
+    <string name="app_title1">Kotlin</string>
+    <string name="app_title2">サンプル</string>
+
+    <!-- preference, intent parameter -->
+    <string name="preferences_key" translatable="false">PREFERENCES_KEY</string>
+    <string name="preferences_key_id" translatable="false">PRE_ID</string>
+    <string name="preferences_key_name" translatable="false">PRE_NAME</string>
+    <!--SNSログイン連係-->
+    <string name="facebook_app_id">[APP_ID]</string>
+    <string name="fb_login_protocol_scheme">fb</string>
+    <string name="twitter_consumer_key">key</string>
+    <string name="twitter_consumer_secret" translatable="false">secret</string>
+
+    <!-- login activity -->
+    <string name="hint_id">ユーザIDを入力してください</string>
+    <string name="hint_password">パスワードを入力してください</string>
+    <string name="action_sign_in">ログイン</string>
+    <string name="text_forget">ユーザID・パスワードを忘れた方はこちら ＞</string>
+    <string name="text_sns">SNSアカウントでもログインできます</string>
+    <string name="text_facebook">facebook</string>
+    <string name="text_twitter">twitter</string>
+    <string name="text_line">Line</string>
+    <string name="error_invalid_password">パスワードが短すぎます</string>
+    <string name="error_incorrect_password">パスワードが誤っています</string>
+    <string name="error_field_required">この入力欄は必須です</string>
+    <string name="error_invalid_email">正しいIDを入力してください</string>
+
+    <!-- mypage activity -->
+    <string name="text_confirm_contract">契約内容を確認する</string>
+    <string name="text_in_case">もしもの場合</string>
+    <string name="text_important_contact">重要なご連絡</string>
+    <string name="text_contact_setting">ご連絡先の設定</string>
+    <string name="text_emergency_contact">緊急連絡</string>
+    <string name="text_name_title">%s　様</string>
+    <string name="text_call_number">tel:%s</string>
+    <string name="text_call_message">%s \nへ電話しますか</string>
+
+    <!--もしもの場合 Fragment-->
+    <string name="title_activity_in_case_of">もしもの場合</string>
+    <string name="text_in_case_of_message">あなたの保有している契約で\n支払いがある可能性があります。</string>
+    <string name="text_accident_type">AAAの種類</string>
+    <string name="text_accident_type_car">BBB発生した場合</string>
+    <string name="text_accident_type_illness">１２３４５６７８９０をした場合</string>
+    <string name="text_accident_type_building">QWERTYUIあった場合</string>
+    <string name="text_accident_type_travel">ASDFGHJが発生した場合</string>
+    <string name="text_accident_type_theft">ZXCVBNMがあった場合</string>
+    <string name="agreement">契約あり</string>
+    <string name="agreement_non">契約なし</string>
+    <string name="text_contract_conf">ご契約内容についてご確認ください</string>
+
+    <!--保有契約 Fragment-->
+    <string name="title_my_contract">あなたの保有契約</string>
+    <string name="title_car_insurance">○○○○○○</string>
+    <string name="title_fire_insurance">△△△△</string>
+    <string name="title_life_insurance">■■■■</string>
+    <string name="title_accident_insurance">▽▽▽▽▽</string>
+    <string name="title_other_insurance">その他</string>
+    <string name="title_contact_company">～～～～～へのご連絡</string>
+
+    <!--ご連絡先 Fragment-->
+    <string name="title_contact">ご連絡先</string>
+    <string name="text_contact_message">ご契約のお手続きに関する\nご連絡先を設定できます。</string>
+    <string name="text_contact_you">□ あなた</string>
+    <string name="text_contact_family">□ ご家族%d</string>
+
+    <string name="text_my_info">ご本人情報</string>
+    <string name="text_family_info">ご家族%d情報</string>
+    <string name="text_del">削除</string>
+    <string name="text_edit">編集</string>
+    <string name="text_relationship">続柄</string>
+    <string name="text_relationship_wife">妻</string>
+    <string name="text_relationship_child">子供</string>
+    <string name="text_relationship_parent">親</string>
+    <string name="text_relationship_etc">その他</string>
+    <string name="text_name_kanji">氏名（漢字）</string>
+    <string name="text_name_kana">氏名（かな）</string>
+    <string name="text_tel">自宅Tel</string>
+    <string name="text_sms">携帯SMS</string>
+    <string name="text_pc_mail">PC Mail</string>
+    <string name="text_mobile_mail">携帯Mail</string>
+    <string name="text_contact_method">ご連絡方法</string>
+
+    <!--マイページ（ホーム） Fragment-->
+    <string name="title_my_page_setting">マイページ設定</string>
+    <string name="text_profile_registration">プロフィール登録</string>
+    <string name="text_setting_notice">通知先設定</string>
+    <string name="text_add_contract">契約追加</string>
+
+    <!--option menu-->
+    <string name="menu_name">%s　様</string>
+    <string name="menu_contract">保有契約</string>
+    <string name="menu_add_contract">契約を追加</string>
+    <string name="menu_profile">プロフィール</string>
+    <string name="menu_add_profile">プロフィールを追加する</string>
+    <string name="menu_setting_notification">通知先設定</string>
+    <string name="menu_list_of_insurance_companies">一覧</string>
+    <string name="menu_list_of_cards">カード一覧</string>
+    <string name="menu_important_notice">重要なお知らせ</string>
+    <string name="menu_version">規約・バージョン情報</string>
+    <string name="menu_logout">ログアウト</string>
+    <string name="message_logout">ログアウトしますか</string>
+
+    <!--bottomNavigation-->
+    <string name="title_home">ホーム</string>
+    <string name="title_contract">保有契約</string>
+    <string name="title_notice">お知らせ</string>
+    <string name="title_help">ヘルプ</string>
+
+    <string-array name="list">
+        <item>妻</item>
+        <item>子供</item>
+        <item>親</item>
+        <item>その他</item>
+    </string-array>
+    <string-array name="companyList">
+        <item>xxx株式会社</item>
+        <item>〇〇〇株式会社</item>
+        <item>△△株式会社</item>
+        <item>その他</item>
+    </string-array>
+
+    <string name="google_maps_key">TODO map key</string>
+
+    <string name="text_distributor">取扱代理店</string>
+    <string name="text_insurance_company">会社</string>
+    <string name="text_insurance_type">種類</string>
+    <string name="text_policy_number">番号</string>
+    <string name="text_contractor">契約者</string>
+    <string name="text_date_of_application">申込日</string>
+    <string name="text_start_date">始期日</string>
+    <string name="text_maturity_date">満期日</string>
+    <string name="text_insured">被〇〇者</string>
+    <string name="text_compensation">賠償</string>
+    <string name="text_vehicle">車両</string>
+    <string name="text_limited_driver">限定運転者</string>
+    <string name="text_fire_insurance">△△△△</string>
+    <string name="text_car_name">車名</string>
+    <string name="text_registration_number">登録番号</string>
+    <string name="text_none">none</string>
+    <string name="title_warranty">ワランティ</string>
+    <string name="title_add_contract">追加する</string>
+    <string name="title_contact_setting">ご連絡先設定</string>
+    <string name="title_contact_adding">ご連絡先登録</string>
+    <string name="title_inquiries">お問い合わせ</string>
+    <string name="title_creditcard">クレジットカード</string>
+    <string name="title_insurance_list">〇〇一覧</string>
+    <string name="title_add_profile">プロフィール登録</string>
+    <string name="msg_add_contract">あなたが保有している、AAA、\nBBB、\n各種CCCを登録できます。</string>
+    <string name="msg_contract_info">あなたの契約情報です。</string>
+    <string name="msg_card">あなたの〇〇です。</string>
+    <string name="msg_warranty">あなたの■■登録情報です。</string>
+    <string name="msg_add_warranty">あなたが保有する～～～を登録できます。</string>
+    <string name="cd_person_list">Persons list</string>
+    <string name="cd_contract_list">Contract list</string>
+    <string name="text_handling_agency">取扱代理店</string>
+    <string name="text_securities_information">情報</string>
+    <string name="text_registration">登録</string>
+    <string name="text_next">次へ</string>
+    <string name="text_back">戻る</string>
+    <string name="text_cancel">キャンセル</string>
+    <string name="text_birthday">生年月日</string>
+    <string name="text_address">住所</string>
+    <string name="text_select_insurance">種目を選択</string>
+    <string name="text_confirm_registration">登録しますか</string>
+    <string name="text_confirm_save">保存しますか</string>
+    <string name="text_confirm_delete">削除しますか</string>
+    <string name="text_add_insurance">契約を登録</string>
+    <string name="text_add_card">〇〇を登録</string>
+    <string name="text_add_warranty">△△を登録</string>
+    <string name="text_postal_code">郵便番号</string>
+    <string name="text_insurance_fee">金額</string>
+    <string name="text_transfer_method">振込方法</string>
+    <string name="text_tel_staff">担当者へ発信</string>
+    <string name="text_mail_staff">担当者へメール</string>
+    <string name="text_open_site">wwwサイトを開く</string>
+    <string name="text_start_app">アプリを起動</string>
+    <string name="text_add_contact">連絡先を追加する</string>
+    <string name="text_guidance_of_maturity">満期のご案内</string>
+    <string name="msg_maturity">満期を迎える2ヶ月前に下記の方法で通知します</string>
+    <string name="msg_save">上記内容で保存</string>
+    <string name="text_add_picture">写真を追加する</string>
+    <string name="text_agency_name">代理店名</string>
+    <string name="text_map">地図</string>
+    <string name="text_call">電話</string>
+    <string name="text_mail">メール</string>
+    <string name="text_messenger">メッセンジャー</string>
+    <string name="text_contact">連絡先</string>
+    <string name="text_payment_method">払込方法</string>
+    <string name="text_payment_premium">支払〇〇料</string>
+    <string name="text_payment_date">支払日</string>
+    <string name="text_payment_start_date">払込開始年月</string>
+    <string name="text_maturity_return">満期返戻金</string>
+    <string name="msg_inquiries">下記フォームからお問い合わせください。</string>
+    <string name="text_send">送信</string>
+    <string name="text_destination">宛先</string>
+    <string name="text_contact_type">種別</string>
+    <string name="text_contents">内容</string>
+    <string name="text_past_inquiries">過去の問い合わせ</string>
+    <string name="text_name">氏名</string>
+    <string name="text_gender">性別</string>
+    <string name="text_security">保証</string>
+    <string name="msg_insurance_certificate">証書（タップでダウンロード）</string>
+    <string name="text_home_page">ホームページ</string>
+    <string name="text_person_in_charge">ご担当者</string>
+    <string name="text_sales_outlet">販売店</string>
+    <string name="text_warranty_number">番号</string>
+    <string name="text_insurance_date">加入日</string>
+    <string name="msg_conf_contract">保有している■■■を確認できます</string>
+    <string name="msg_contact_company">◇◇◇◇にご各種の連絡ができます。</string>
+    <string name="text_take_a_pic">〇〇〇を撮影</string>
+    <string name="hint_input_policy_number">半角英数字（ハイフンなし）で入力</string>
+    <string name="text_warranty_period">保証期間</string>
+    <string name="text_remarks">備考</string>
+    <string name="msg_input_info">情報入力と撮影</string>
+    <string name="text_yen">%s 円</string>
+    <string name="test_name">テスト　太郎</string>
+    <string name="test_date">H33.10.31</string>
+
+</resources>

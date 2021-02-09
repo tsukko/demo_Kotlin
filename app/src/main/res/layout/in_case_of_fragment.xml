@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="accidentTypeViewModel"
+            type="jp.co.integrityworks.prototype.viewmodel.AccidentTypeViewModel" />
+
+        <variable
+            name="callback"
+            type="jp.co.integrityworks.prototype.ui.incaseof.InCaseOfClickCallback" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/inCaseOfTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_large"
+                android:text="@string/text_in_case_of_message"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/AccidentTypeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray"
+                android:gravity="start"
+                android:paddingStart="@dimen/margin_large"
+                android:paddingTop="@dimen/margin_middle"
+                android:paddingEnd="@dimen/margin_large"
+                android:paddingBottom="@dimen/margin_middle"
+                android:text="@string/text_accident_type"
+                android:textColor="@android:color/black" />
+
+            <include
+                android:id="@+id/in_case_of_item1"
+                layout="@layout/in_case_of_item"
+                app:accidentType="@{accidentTypeViewModel.accidentTypeList[0]}"
+                app:callback="@{callback}"
+                bind:accidentTypeIcon="@{@drawable/icon_car}"
+                bind:accidentTypeTitle="@{@string/text_accident_type_car}" />
+
+            <include
+                android:id="@+id/in_case_of_item2"
+                layout="@layout/in_case_of_item"
+                app:accidentType="@{accidentTypeViewModel.accidentTypeList[1]}"
+                app:callback="@{callback}"
+                bind:accidentTypeIcon="@{@drawable/icon_umbrella}"
+                bind:accidentTypeTitle="@{@string/text_accident_type_illness}" />
+
+            <include
+                android:id="@+id/in_case_of_item3"
+                layout="@layout/in_case_of_item"
+                app:accidentType="@{accidentTypeViewModel.accidentTypeList[2]}"
+                app:callback="@{callback}"
+                bind:accidentTypeIcon="@{@drawable/icon_building}"
+                bind:accidentTypeTitle="@{@string/text_accident_type_building}" />
+
+            <include
+                android:id="@+id/in_case_of_item4"
+                layout="@layout/in_case_of_item"
+                app:accidentType="@{accidentTypeViewModel.accidentTypeList[3]}"
+                app:callback="@{callback}"
+                bind:accidentTypeIcon="@{@drawable/icon_travel}"
+                bind:accidentTypeTitle="@{@string/text_accident_type_travel}" />
+
+            <include
+                android:id="@+id/in_case_of_item5"
+                layout="@layout/in_case_of_item"
+                app:accidentType="@{accidentTypeViewModel.accidentTypeList[4]}"
+                app:callback="@{callback}"
+                bind:accidentTypeIcon="@{@drawable/icon_briefcase}"
+                bind:accidentTypeTitle="@{@string/text_accident_type_theft}" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

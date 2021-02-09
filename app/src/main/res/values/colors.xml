@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <color name="colorPrimaryDark">#303F9F</color>
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <color name="colorGray">#808080</color>
+    <!--<color name="colorGray2">#888888</color>-->
+
+    <color name="colorTextEmergency">#BC4328</color>
+    <color name="colorTextTitlePortal">#51565A</color>
+    <color name="colorTextName">#222325</color>
+    <color name="colorButton">#6785C1</color>
+    <color name="colorButtonPress">#4444ff</color>
+    <color name="colorMenu">#3960FF</color>
+    <color name="colorMenuBackground">#6785C1</color>
+    <color name="colorNavigation">#6785C1</color>
+    <color name="colorTextBase">#1A1A1A</color>
+    <color name="colorSwitchSelected">#E6B500</color>
+    <color name="colorEditBackground">#d6d6d6</color>
+    <color name="background_light_gray">#ccd6dd</color>
+
+    <drawable name="translucent">#66FFFFFF</drawable>
+</resources>

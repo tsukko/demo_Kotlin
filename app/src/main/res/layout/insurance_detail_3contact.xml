@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="policyLifeResponse"
+            type="jp.co.integrityworks.prototype.api.response.PolicyLifeResponse" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <!--連絡先-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_middle"
+            android:layout_marginEnd="@dimen/margin_middle"
+            android:padding="@dimen/margin_small"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardUseCompatPadding="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_middle">
+
+                <TextView
+                    android:id="@+id/textView3_1_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/darker_gray"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_contact"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView3_2_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_postal_code"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3_1_1" />
+
+                <TextView
+                    android:id="@+id/textView3_2_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="110dp"
+                    android:padding="@dimen/margin_middle"
+                    android:text="未定義"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3_1_1" />
+
+                <View
+                    android:id="@+id/lineView3_2_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3_2_1" />
+
+                <TextView
+                    android:id="@+id/textView3_3_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_address"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lineView3_2_3" />
+
+                <TextView
+                    android:id="@+id/textView3_3_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="未定義"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="@id/textView3_2_2"
+                    app:layout_constraintTop_toBottomOf="@+id/lineView3_2_3" />
+
+                <View
+                    android:id="@+id/lineView3_3_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3_3_1" />
+
+                <TextView
+                    android:id="@+id/textView3_4_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_call"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lineView3_3_3" />
+
+                <TextView
+                    android:id="@+id/textView3_4_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="未定義"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="@id/textView3_2_2"
+                    app:layout_constraintTop_toBottomOf="@+id/lineView3_3_3" />
+
+                <View
+                    android:id="@+id/lineView3_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3_4_1" />
+
+                <TextView
+                    android:id="@+id/textView3_5_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_mail"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lineView3_2" />
+
+                <TextView
+                    android:id="@+id/textView3_5_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="未定義"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="@id/textView3_2_2"
+                    app:layout_constraintTop_toBottomOf="@+id/lineView3_2" />
+
+                <View
+                    android:id="@+id/lineView3_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3_5_1" />
+
+                <TextView
+                    android:id="@+id/textView3_6_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_messenger"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lineView3_5" />
+
+                <TextView
+                    android:id="@+id/textView3_6_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="未定義"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="@id/textView3_2_2"
+                    app:layout_constraintTop_toBottomOf="@+id/lineView3_5" />
+
+                <View
+                    android:id="@+id/lineView3_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3_6_1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</layout>

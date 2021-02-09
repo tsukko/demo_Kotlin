@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="accidentTypeIcon"
+            type="android.graphics.drawable.Drawable" />
+
+        <variable
+            name="accidentTypeTitle"
+            type="String" />
+
+        <variable
+            name="accidentType"
+            type="jp.co.integrityworks.prototype.db.entity.AccidentType" />
+
+        <variable
+            name="callback"
+            type="jp.co.integrityworks.prototype.ui.incaseof.InCaseOfClickCallback" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:id="@+id/typeLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:onClick="@{() ->  callback.onClick(accidentType)}"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/margin_middle"
+            android:paddingBottom="@dimen/margin_middle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/accidentTypeImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:contentDescription="@string/text_none"
+                android:src="@{accidentTypeIcon}" />
+
+            <TextView
+                android:id="@+id/accidentTypeTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="1"
+                android:text="@{accidentTypeTitle}"
+                android:textColor="@color/colorTextBase"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/agreementTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:background="@{accidentType.haveContract ? @color/colorButton: @color/colorGray}"
+                android:padding="@dimen/margin_small"
+                android:text="@{accidentType.haveContract ? @string/agreement: @string/agreement_non}"
+                android:textSize="@dimen/text_size_label_small" />
+
+            <ImageView
+                android:id="@+id/showContractImageView"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:contentDescription="@string/text_none"
+                android:src="@{accidentType.showDetail ? @drawable/arrow_close : @drawable/arrow_open}"
+                android:visibility="@{accidentType.haveContract ? View.VISIBLE : View.INVISIBLE}" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/lineView1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@+id/typeLinearLayout" />
+
+        <LinearLayout
+            android:id="@+id/detailLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="@{accidentType.showDetail ?View.VISIBLE : View.GONE }"
+            app:layout_constraintTop_toBottomOf="@id/lineView1">
+
+            <TextView
+                android:id="@+id/contractConfirmTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_middle"
+                android:text="@string/text_contract_conf"
+                android:textColor="@color/colorGray" />
+
+            <include
+                android:id="@+id/in_case_of_contract_overview"
+                layout="@layout/contract_item" />
+
+            <View
+                android:id="@+id/lineView2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

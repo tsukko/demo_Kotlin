@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorEditBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_large"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="ステップ１"
+                    android:textColor="@color/colorTextBase" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_middle"
+                android:gravity="center_horizontal"
+                android:text="@string/text_select_insurance"
+                android:textColor="@color/colorTextBase" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorEditBackground"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/addCarInsuranceView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_middle"
+                    android:layout_marginTop="@dimen/margin_middle"
+                    android:layout_marginEnd="@dimen/margin_middle"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/carTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_large"
+                        android:drawableStart="@drawable/automobile"
+                        android:drawablePadding="@dimen/margin_large"
+                        android:gravity="center_vertical"
+                        android:text="@string/title_car_insurance"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/addFireInsurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_middle"
+                    android:layout_marginTop="@dimen/margin_middle"
+                    android:layout_marginEnd="@dimen/margin_middle"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/fireTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_large"
+                        android:drawableStart="@drawable/house"
+                        android:drawablePadding="@dimen/margin_large"
+                        android:gravity="center_vertical"
+                        android:text="@string/title_fire_insurance"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/addLifeInsurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_middle"
+                    android:layout_marginTop="@dimen/margin_middle"
+                    android:layout_marginEnd="@dimen/margin_middle"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/lifeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_large"
+                        android:drawableStart="@drawable/life"
+                        android:drawablePadding="@dimen/margin_large"
+                        android:gravity="center_vertical"
+                        android:text="@string/title_life_insurance"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/addAccidentInsurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_middle"
+                    android:layout_marginTop="@dimen/margin_middle"
+                    android:layout_marginEnd="@dimen/margin_middle"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/accidentTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_large"
+                        android:drawableStart="@drawable/accident"
+                        android:drawablePadding="@dimen/margin_large"
+                        android:gravity="center_vertical"
+                        android:text="@string/title_accident_insurance"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/addEtcInsurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_middle"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/etcTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_large"
+                        android:drawableStart="@drawable/etc"
+                        android:drawablePadding="@dimen/margin_large"
+                        android:gravity="center_vertical"
+                        android:text="@string/title_other_insurance"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

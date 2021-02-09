@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="insurance"
+            type="jp.co.integrityworks.prototype.db.entity.Insurance" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_middle"
+                android:padding="@dimen/margin_small"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_middle">
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/darker_gray"
+                        android:padding="@dimen/margin_middle"
+                        android:text="あんしん延長保証"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_middle"
+                        android:background="@android:color/darker_gray"
+                        android:padding="@dimen/margin_middle"
+                        android:text="@string/text_cancel"
+                        android:textColor="@color/colorPrimaryDark"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="@string/text_sales_outlet"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="△△カメラ"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toEndOf="@+id/textView2"
+                        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+                    <View
+                        android:id="@+id/lineView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                    <TextView
+                        android:id="@+id/name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="@string/text_warranty_number"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lineView1" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="123456"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toEndOf="@+id/textView2"
+                        app:layout_constraintTop_toBottomOf="@+id/lineView1" />
+
+                    <View
+                        android:id="@+id/lineView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/name2" />
+
+                    <TextView
+                        android:id="@+id/name3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="@string/text_insurance_date"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/lineView3" />
+
+                    <TextView
+                        android:id="@+id/name4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="2000/01/01"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toEndOf="@+id/textView2"
+                        app:layout_constraintTop_toBottomOf="@id/lineView3" />
+
+                    <TextView
+                        android:id="@+id/targetTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/darker_gray"
+                        android:padding="@dimen/margin_middle"
+                        android:text="対象"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/name3" />
+
+                    <TextView
+                        android:id="@+id/name5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="メーカ名"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/targetTextView" />
+
+                    <TextView
+                        android:id="@+id/name6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="xx製作所"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toEndOf="@+id/textView2"
+                        app:layout_constraintTop_toBottomOf="@id/targetTextView" />
+
+                    <View
+                        android:id="@+id/lineView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/name5" />
+
+                    <TextView
+                        android:id="@+id/name7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="型番"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/lineView5" />
+
+                    <TextView
+                        android:id="@+id/name8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="xx-xxxx"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toEndOf="@+id/name7"
+                        app:layout_constraintStart_toStartOf="@+id/name"
+                        app:layout_constraintTop_toBottomOf="@id/lineView5" />
+
+                    <View
+                        android:id="@+id/lineView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/name7" />
+
+                    <TextView
+                        android:id="@+id/name9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="製品名"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/lineView6" />
+
+                    <TextView
+                        android:id="@+id/name10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="@{insurance.maturityDate}"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toStartOf="@+id/name"
+                        app:layout_constraintTop_toBottomOf="@id/lineView6" />
+
+                    <View
+                        android:id="@+id/lineView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/name9" />
+
+                    <TextView
+                        android:id="@+id/name14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="名称"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lineView7" />
+
+                    <TextView
+                        android:id="@+id/name11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="H33.10.31"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toStartOf="@+id/name"
+                        app:layout_constraintTop_toBottomOf="@+id/lineView7" />
+
+                    <View
+                        android:id="@+id/lineView14"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/name11" />
+
+                    <TextView
+                        android:id="@+id/name15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="@string/text_warranty_period"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lineView14" />
+
+                    <TextView
+                        android:id="@+id/name16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="5年保証 （メーカ保証含む）"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toStartOf="@+id/name"
+                        app:layout_constraintTop_toBottomOf="@+id/lineView14" />
+
+                    <View
+                        android:id="@+id/lineView15"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintStart_toStartOf="@+id/name16"
+                        app:layout_constraintTop_toBottomOf="@+id/name15" />
+
+                    <TextView
+                        android:id="@+id/name17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="H33.10.31"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toStartOf="@+id/name"
+                        app:layout_constraintTop_toBottomOf="@+id/lineView15" />
+
+                    <View
+                        android:id="@+id/lineView16"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/name17" />
+
+                    <TextView
+                        android:id="@+id/name18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="@string/text_remarks"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lineView16" />
+
+                    <TextView
+                        android:id="@+id/name19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toStartOf="@+id/name"
+                        app:layout_constraintTop_toBottomOf="@+id/lineView16" />
+
+                    <TextView
+                        android:id="@+id/textView3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/darker_gray"
+                        android:padding="@dimen/margin_middle"
+                        android:text="写真"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/name18" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_middle"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/text_none"
+                        android:padding="@dimen/margin_middle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView3_1"
+                        app:srcCompat="@drawable/sample_insurance" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_middle"
+                        android:text="製品や保証証の写真を追加する"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_middle"
+                        android:background="@drawable/button_state"
+                        android:text="@string/msg_save"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</layout>

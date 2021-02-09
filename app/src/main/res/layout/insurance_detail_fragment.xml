@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="policyLifeResponse"
+            type="jp.co.integrityworks.prototype.api.response.PolicyLifeResponse" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <ScrollView
+            android:id="@+id/insuranceDetailScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/insuranceDetailTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_middle"
+                    android:layout_marginEnd="@dimen/margin_large"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:drawableStart="@drawable/automobile"
+                    android:drawablePadding="@dimen/margin_large"
+                    android:gravity="center_vertical"
+                    android:text="@string/msg_contract_info"
+                    android:textColor="@color/colorTextBase" />
+
+                <include
+                    layout="@layout/insurance_detail_1agent"
+                    app:policyLifeResponse="@{policyLifeResponse}" />
+
+                <include
+                    layout="@layout/insurance_detail_2policy_info"
+                    app:policyLifeResponse="@{policyLifeResponse}" />
+
+                <include
+                    layout="@layout/insurance_detail_3contact"
+                    app:policyLifeResponse="@{policyLifeResponse}" />
+
+                <include
+                    layout="@layout/insurance_detail_4premium"
+                    app:policyLifeResponse="@{policyLifeResponse}" />
+
+                <include
+                    layout="@layout/insurance_detail_5insured_info"
+                    app:policyLifeResponse="@{policyLifeResponse}" />
+
+                <include
+                    layout="@layout/insurance_detail_6cover"
+                    app:policyLifeResponse="@{policyLifeResponse}" />
+
+                <include
+                    layout="@layout/insurance_detail_7policyholder"
+                    app:policyLifeResponse="@{policyLifeResponse}" />
+
+                <include
+                    layout="@layout/insurance_detail_8agent"
+                    app:policyLifeResponse="@{policyLifeResponse}" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/insuranceDetailGoToTopImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:contentDescription="@string/text_none"
+            android:padding="@dimen/margin_middle"
+            android:src="@drawable/back_to_top"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+</layout>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="person"
+            type="jp.co.integrityworks.prototype.db.entity.Person" />
+
+        <variable
+            name="callback"
+            type="jp.co.integrityworks.prototype.ui.contact.ContactSettingClickCallback" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/contactCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_middle"
+            android:layout_marginTop="@dimen/margin_middle"
+            android:layout_marginEnd="@dimen/margin_middle"
+            android:layout_marginBottom="@dimen/margin_middle"
+            android:padding="@dimen/margin_small"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin_middle">
+
+                <!--ここからご連絡先情報-->
+                <LinearLayout
+                    android:id="@+id/contactLinearLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/darker_gray"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/contactTextView9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/margin_middle"
+                        android:text="@string/title_contact"
+                        android:textColor="@color/colorTextBase" />
+
+                    <TextView
+                        android:id="@+id/cancelContactTextEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="@string/text_cancel"
+                        android:textColor="@color/colorPrimaryDark" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/contactLineView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:id="@+id/contactLinearLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/margin_middle"
+                    android:paddingEnd="@dimen/margin_middle">
+
+                    <TextView
+                        android:id="@+id/contactTextView11"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:labelFor="@id/telTextView"
+                        android:text="@string/text_tel"
+                        android:textColor="@color/colorTextBase" />
+
+                    <EditText
+                        android:id="@+id/telTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_small"
+                        android:background="@color/colorEditBackground"
+                        android:importantForAutofill="no"
+                        android:inputType="phone"
+                        android:padding="@dimen/margin_small"
+                        android:singleLine="true"
+                        android:text="@{person.tel}"
+                        android:textColor="@color/colorTextBase" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/contactLineView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/margin_middle"
+                    android:layout_marginEnd="@dimen/margin_middle"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:id="@+id/contactLinearLayout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/margin_middle"
+                    android:paddingEnd="@dimen/margin_middle">
+
+                    <TextView
+                        android:id="@+id/contactTextView13"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:labelFor="@id/smsTextView"
+                        android:text="@string/text_sms"
+                        android:textColor="@color/colorTextBase" />
+
+                    <EditText
+                        android:id="@+id/smsTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_small"
+                        android:background="@color/colorEditBackground"
+                        android:importantForAutofill="no"
+                        android:inputType="phone"
+                        android:padding="@dimen/margin_small"
+                        android:singleLine="true"
+                        android:text="@{person.sms}"
+                        android:textColor="@color/colorTextBase" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/contactLineView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/margin_middle"
+                    android:layout_marginEnd="@dimen/margin_middle"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:id="@+id/contactLinearLayout7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/margin_middle"
+                    android:paddingEnd="@dimen/margin_middle">
+
+                    <TextView
+                        android:id="@+id/contactTextView15"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:labelFor="@id/pcMailTextView"
+                        android:text="@string/text_pc_mail"
+                        android:textColor="@color/colorTextBase" />
+
+                    <EditText
+                        android:id="@+id/pcMailTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_small"
+                        android:background="@color/colorEditBackground"
+                        android:importantForAutofill="no"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/margin_small"
+                        android:singleLine="true"
+                        android:text="@{person.pcMail}"
+                        android:textColor="@color/colorTextBase" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/contactLineView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/margin_middle"
+                    android:layout_marginEnd="@dimen/margin_middle"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:id="@+id/contactLinearLayout8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/margin_middle"
+                    android:paddingEnd="@dimen/margin_middle">
+
+                    <TextView
+                        android:id="@+id/contactTextView17"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:labelFor="@id/emailTextView"
+                        android:text="@string/text_mobile_mail"
+                        android:textColor="@color/colorTextBase" />
+
+                    <EditText
+                        android:id="@+id/emailTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_small"
+                        android:background="@color/colorEditBackground"
+                        android:importantForAutofill="no"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/margin_small"
+                        android:singleLine="true"
+                        android:text="@{person.eMail}"
+                        android:textColor="@color/colorTextBase" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/contactLineView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/saveContactButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_middle"
+                    android:background="@drawable/button_state"
+                    android:text="@string/msg_save" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</layout>

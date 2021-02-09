@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="person"
+            type="jp.co.integrityworks.prototype.db.entity.Person" />
+
+        <variable
+            name="callback"
+            type="jp.co.integrityworks.prototype.ui.contact.ContactInfoCallback" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_middle"
+            android:layout_marginEnd="@dimen/margin_middle"
+            android:layout_marginBottom="@dimen/margin_middle"
+            android:onClick="@{() ->  callback.onClick(person)}"
+            android:padding="@dimen/margin_small"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardUseCompatPadding="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_middle"
+                android:layout_marginEnd="@dimen/margin_middle">
+
+                <TextView
+                    android:id="@+id/youTextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_middle"
+                    android:padding="@dimen/margin_small"
+                    android:text="@{person.relationship == 0  ? @string/text_contact_you: @string/text_contact_family(person.relationship)}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/contractorTextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_middle"
+                    android:background="@drawable/shape_label"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/margin_large"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingEnd="@dimen/margin_large"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:text="@{callback.onSettingRelationship(person.relationship)}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toEndOf="@+id/youTextView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/contractorNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_middle"
+                    android:text="@{person.nameKanji}"
+                    android:textColor="@color/colorTextBase"
+                    android:textSize="@dimen/text_size_large"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/youTextView" />
+
+                <ImageView
+                    android:id="@+id/arrowRightImageView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="@dimen/margin_middle"
+                    android:contentDescription="@string/text_none"
+                    android:src="@drawable/arrow_right"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/contactLineView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/contactLineView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_middle"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintEnd_toEndOf="@+id/mailImageView2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/contractorNameTextView" />
+
+                <ImageView
+                    android:id="@+id/phoneImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_middle"
+                    android:contentDescription="@string/text_none"
+                    android:padding="@dimen/margin_middle"
+                    android:src="@drawable/phone"
+                    android:visibility="@{person.tel != null ? View.VISIBLE : View.INVISIBLE}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/contactLineView" />
+
+                <ImageView
+                    android:id="@+id/smsImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_middle"
+                    android:contentDescription="@string/text_none"
+                    android:padding="@dimen/margin_middle"
+                    android:src="@drawable/sms"
+                    android:visibility="@{person.sms != null ? View.VISIBLE : View.INVISIBLE}"
+                    app:layout_constraintStart_toEndOf="@+id/phoneImageView"
+                    app:layout_constraintTop_toBottomOf="@+id/contactLineView" />
+
+                <ImageView
+                    android:id="@+id/mailImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_middle"
+                    android:contentDescription="@string/text_none"
+                    android:padding="@dimen/margin_middle"
+                    android:src="@drawable/mail"
+                    android:visibility="@{person.pcMail != null ? View.VISIBLE : View.INVISIBLE}"
+                    app:layout_constraintStart_toEndOf="@+id/smsImageView"
+                    app:layout_constraintTop_toBottomOf="@+id/contactLineView" />
+
+                <ImageView
+                    android:id="@+id/mailImageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_middle"
+                    android:contentDescription="@string/text_none"
+                    android:padding="@dimen/margin_middle"
+                    android:src="@drawable/mail"
+                    android:visibility="@{person.eMail != null ? View.VISIBLE : View.INVISIBLE}"
+                    app:layout_constraintStart_toEndOf="@+id/mailImageView"
+                    app:layout_constraintTop_toBottomOf="@+id/contactLineView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</layout>
