@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="insurance"
+            type="jp.co.integrityworks.prototype.db.entity.Insurance" />
+
+        <variable
+            name="callback"
+            type="jp.co.integrityworks.prototype.ui.contract.InForceContractCallback" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <ScrollView
+            android:id="@+id/cardDetailScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_large"
+                    android:drawableStart="@drawable/creditcard"
+                    android:drawablePadding="@dimen/margin_large"
+                    android:gravity="center_vertical"
+                    android:text="@string/msg_card"
+                    android:textColor="@color/colorTextBase" />
+
+                <SearchView
+                    android:id="@+id/cardSearchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:layout_marginEnd="@dimen/margin_large"
+                    android:background="@drawable/shape_search_view"
+                    android:queryBackground="@color/colorButton"
+                    android:queryHint="カード名で検索" />
+
+                <include layout="@layout/credit_card_select" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/cardDetailGoToTopImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:contentDescription="@string/text_none"
+            android:padding="@dimen/margin_middle"
+            android:src="@drawable/back_to_top"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+</layout>

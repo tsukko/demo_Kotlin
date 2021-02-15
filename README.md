@@ -1,5 +1,28 @@
 # PoC of Android
 
+## memo
+Kotlinにて、MVVM実装やいくつかのライブラリの実装勘を磨くための練習用
+アイコンなど一部の画像ファイルは未コミットです。なのでgit cloneしただけではビルド不可
+名称なども適当なものに変えています。
+
+### 試していること
+- スプラッシュ画面
+- ログイン画面
+  - メールアドレス＆パスワード、バリデーションあり
+  - SNSログイン連携（Facebook、Twitter、Line）
+- ユーザ画面
+  - データをアプリ内部に保存
+- 契約一覧画面
+  - 内部DBから一覧を表示
+  - バックグラウンドでサーバからAPIでデータを取得
+  - 取得後、画面更新
+- 登録画面
+  - 登録時の選択可能項目もサーバから取得
+  - 書類をカメラで撮影しサーバに格納
+  →登録種類によって、複数画面を用意する
+- 詳細画面
+  - 上記の内容をよしなに表示する
+
 ## Overview
 - Resource files added by Android Studio plugin.  
 [Android Drawable Importer](https://plugins.jetbrains.com/plugin/7658-android-drawable-importer)  

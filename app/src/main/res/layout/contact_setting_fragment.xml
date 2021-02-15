@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="person"
+            type="jp.co.integrityworks.prototype.db.entity.Person" />
+
+        <variable
+            name="callback"
+            type="jp.co.integrityworks.prototype.ui.contact.ContactSettingClickCallback" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <ScrollView
+            android:id="@+id/contactSettingScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_middle"
+                    android:layout_marginTop="@dimen/margin_middle"
+                    android:text="@string/title_contact"
+                    android:textColor="@android:color/black" />
+
+                <include
+                    android:id="@+id/contactSubscriberInclude"
+                    layout="@layout/contact_setting_person_area"
+                    app:callback="@{callback}"
+                    app:person="@{person}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_middle"
+                    android:layout_marginTop="@dimen/margin_middle"
+                    android:text="@string/text_contact_method"
+                    android:textColor="@android:color/black" />
+
+                <!--ここは、複数読み込む-->
+                <include
+                    android:id="@+id/contactContractInclude"
+                    layout="@layout/contact_setting_contract_area" />
+
+                <!--TODO 上に戻るボタン表示用のダミー。要レイアウト見直し-->
+                <ImageView
+                    android:id="@+id/dummyImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:contentDescription="@string/text_none"
+                    android:padding="@dimen/margin_middle"
+                    android:src="@drawable/back_to_top"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/contactSettingGoToTopImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:contentDescription="@string/text_none"
+            android:padding="@dimen/margin_middle"
+            android:src="@drawable/back_to_top"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+</layout>

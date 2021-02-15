@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="policyLifeResponse"
+            type="jp.co.integrityworks.prototype.api.response.PolicyLifeResponse" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <!--取扱代理店-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_middle"
+            android:layout_marginEnd="@dimen/margin_middle"
+            android:padding="@dimen/margin_small"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardUseCompatPadding="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_middle">
+
+                <TextView
+                    android:id="@+id/agentTitleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/darker_gray"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_distributor"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/agentTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_agency_name"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentTitleTextView" />
+
+                <TextView
+                    android:id="@+id/agentTextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="110dp"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@{policyLifeResponse.agentInfo.agentName}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentTitleTextView" />
+
+                <View
+                    android:id="@+id/agentLineView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/agentTextView" />
+
+                <TextView
+                    android:id="@+id/agentTextView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_postal_code"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentLineView1" />
+
+                <TextView
+                    android:id="@+id/agentTextView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="110dp"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@{policyLifeResponse.agentInfo.postalCode}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentLineView1" />
+
+                <View
+                    android:id="@+id/agentLineView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/agentTextView3" />
+
+                <TextView
+                    android:id="@+id/agentTextView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_address"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentLineView2" />
+
+                <TextView
+                    android:id="@+id/agentTextView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="110dp"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@{policyLifeResponse.agentInfo.address}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentLineView2" />
+
+                <View
+                    android:id="@+id/agentLineView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/agentTextView5" />
+
+                <TextView
+                    android:id="@+id/agentTextView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_call"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentLineView3" />
+
+                <TextView
+                    android:id="@+id/agentTextView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="110dp"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@{policyLifeResponse.agentInfo.phone}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentLineView3" />
+
+                <View
+                    android:id="@+id/agentLineView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/agentTextView7" />
+
+                <TextView
+                    android:id="@+id/agentTextView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_home_page"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentLineView4" />
+
+                <TextView
+                    android:id="@+id/agentTextView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="110dp"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@{policyLifeResponse.agentInfo.homepage}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentLineView4" />
+
+                <View
+                    android:id="@+id/agentLineView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/agentTextView9" />
+
+                <TextView
+                    android:id="@+id/agentTextView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_map"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentLineView5" />
+
+                <!--<fragment-->
+                <!--android:id="@+id/map"-->
+                <!--android:name="com.google.android.gms.maps.SupportMapFragment"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="100dp"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/agentTextView11" />-->
+
+                <View
+                    android:id="@+id/agentLineView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/agentTextView11" />
+
+                <TextView
+                    android:id="@+id/agentTextView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_person_in_charge"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentLineView6" />
+
+                <TextView
+                    android:id="@+id/agentTextView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="110dp"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@{policyLifeResponse.agentInfo.department1}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentLineView6" />
+
+                <View
+                    android:id="@+id/agentLineView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/agentTextView12" />
+
+                <TextView
+                    android:id="@+id/agentTextView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="110dp"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@{policyLifeResponse.agentInfo.personnel1}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentLineView7" />
+
+                <View
+                    android:id="@+id/agentLineView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/agentTextView14" />
+
+                <TextView
+                    android:id="@+id/agentTextView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_call"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentLineView8" />
+
+                <TextView
+                    android:id="@+id/agentTextView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="110dp"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@{policyLifeResponse.agentInfo.dairitenPhone}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentLineView8" />
+
+                <View
+                    android:id="@+id/agentLineView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/agentTextView15" />
+
+                <TextView
+                    android:id="@+id/agentTextView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_mail"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentLineView9" />
+
+                <TextView
+                    android:id="@+id/agentTextView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="110dp"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@{policyLifeResponse.agentInfo.mail}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentLineView9" />
+
+                <View
+                    android:id="@+id/agentLineView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/agentTextView17" />
+
+                <ImageView
+                    android:id="@+id/imageView8_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_xlarge"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:contentDescription="@string/text_none"
+                    android:padding="@dimen/margin_small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentLineView10"
+                    app:srcCompat="@drawable/button_phone" />
+
+                <TextView
+                    android:id="@+id/agentTextView8_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small"
+                    android:text="@string/text_tel_staff"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView8_10"
+                    app:layout_constraintStart_toStartOf="@+id/imageView8_10"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView8_10" />
+
+                <ImageView
+                    android:id="@+id/imageView8_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_middle"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginEnd="@dimen/margin_middle"
+                    android:contentDescription="@string/text_none"
+                    android:padding="@dimen/margin_small"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView8_12"
+                    app:layout_constraintStart_toEndOf="@+id/imageView8_10"
+                    app:layout_constraintTop_toBottomOf="@+id/agentLineView10"
+                    app:srcCompat="@drawable/button_mail" />
+
+                <TextView
+                    android:id="@+id/agentTextView8_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small"
+                    android:text="@string/text_mail_staff"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView8_11"
+                    app:layout_constraintStart_toStartOf="@+id/imageView8_11"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView8_11" />
+
+                <ImageView
+                    android:id="@+id/imageView8_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginEnd="@dimen/margin_xlarge"
+                    android:contentDescription="@string/text_none"
+                    android:padding="@dimen/margin_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentLineView10"
+                    app:srcCompat="@drawable/button_app" />
+
+                <TextView
+                    android:id="@+id/agentTextView8_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small"
+                    android:text="@string/text_start_app"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView8_12"
+                    app:layout_constraintStart_toStartOf="@+id/imageView8_12"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView8_12" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+</layout>

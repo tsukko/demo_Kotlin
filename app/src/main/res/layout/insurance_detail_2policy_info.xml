@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="policyLifeResponse"
+            type="jp.co.integrityworks.prototype.api.response.PolicyLifeResponse" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <!--証券情報-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_middle"
+            android:layout_marginEnd="@dimen/margin_middle"
+            android:padding="@dimen/margin_small"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardUseCompatPadding="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/securitiesInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_middle">
+
+                <TextView
+                    android:id="@+id/securitiesInformationTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/darker_gray"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_securities_information"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/insuranceCompanyTextView"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_insurance_company"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/securitiesInformationTextView" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@{policyLifeResponse.policyInfo.insuranceCompany}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toEndOf="@+id/insuranceCompanyTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/securitiesInformationTextView" />
+
+                <ImageView
+                    android:id="@+id/detailContractImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:contentDescription="@string/text_none"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small"
+                    app:layout_constraintBottom_toTopOf="@+id/name4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/securitiesInformationTextView"
+                    app:srcCompat="@drawable/arrow_right" />
+
+                <View
+                    android:id="@+id/policyInfoLineView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/insuranceCompanyTextView" />
+
+                <TextView
+                    android:id="@+id/name3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_insurance_type"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/policyInfoLineView1" />
+
+                <TextView
+                    android:id="@+id/name4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@{policyLifeResponse.policyInfo.insuranceTrade}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toEndOf="@+id/insuranceCompanyTextView"
+                    app:layout_constraintTop_toBottomOf="@id/policyInfoLineView1" />
+
+                <View
+                    android:id="@+id/policyInfoLineView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/name3" />
+
+                <TextView
+                    android:id="@+id/name5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_policy_number"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/policyInfoLineView2" />
+
+                <TextView
+                    android:id="@+id/name6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@{policyLifeResponse.policyInfo.policyNumber}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toEndOf="@+id/insuranceCompanyTextView"
+                    app:layout_constraintTop_toBottomOf="@id/policyInfoLineView2" />
+
+                <View
+                    android:id="@+id/policyInfoLineView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/name5" />
+
+                <TextView
+                    android:id="@+id/name7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_contractor"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/policyInfoLineView3" />
+
+                <TextView
+                    android:id="@+id/name8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:padding="@dimen/margin_middle"
+                    android:text="@{policyLifeResponse.policyInfo.contractor}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toEndOf="@+id/name7"
+                    app:layout_constraintStart_toStartOf="@+id/name"
+                    app:layout_constraintTop_toBottomOf="@id/policyInfoLineView3" />
+
+                <View
+                    android:id="@+id/policyInfoLineView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/name7" />
+
+                <TextView
+                    android:id="@+id/name9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_date_of_application"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/policyInfoLineView4" />
+
+                <TextView
+                    android:id="@+id/name10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@{policyLifeResponse.policyInfo.applicationDate}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="@+id/name"
+                    app:layout_constraintTop_toBottomOf="@id/policyInfoLineView4" />
+
+                <View
+                    android:id="@+id/policyInfoLineView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintStart_toStartOf="@+id/name10"
+                    app:layout_constraintTop_toBottomOf="@+id/name9" />
+
+                <TextView
+                    android:id="@+id/name14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_start_date"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/policyInfoLineView5" />
+
+                <TextView
+                    android:id="@+id/name11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@{policyLifeResponse.policyInfo.effectiveDate}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="@+id/name"
+                    app:layout_constraintTop_toBottomOf="@+id/policyInfoLineView5" />
+
+                <View
+                    android:id="@+id/policyInfoLineView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/name11" />
+
+                <TextView
+                    android:id="@+id/name12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@string/text_maturity_date"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/policyInfoLineView6" />
+
+                <TextView
+                    android:id="@+id/name13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle"
+                    android:text="@{policyLifeResponse.policyInfo.maturityDate}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="@+id/name"
+                    app:layout_constraintTop_toBottomOf="@+id/policyInfoLineView6" />
+
+                <View
+                    android:id="@+id/policyInfoLineView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/name12" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</layout>
