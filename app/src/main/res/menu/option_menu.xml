@@ -1,0 +1,55 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.MainActivity">
+    <item
+        android:id="@+id/action_none"
+        android:checkable="false"
+        android:orderInCategory="100"
+        android:title="@string/menu_name" />
+    <group android:id="@+id/group_0">
+        <item
+            android:id="@+id/action_settings2"
+            android:orderInCategory="200"
+            android:title="@string/menu_contract" />
+    </group>
+
+    <item
+        android:id="@+id/action_settings3"
+        android:orderInCategory="200"
+        android:title="@string/menu_add_contract" />
+    <group android:id="@+id/group_1">
+        <item
+            android:id="@+id/action_settings4"
+            android:orderInCategory="200"
+            android:title="@string/menu_profile" />
+    </group>
+
+    <item
+        android:id="@+id/action_settings5"
+        android:orderInCategory="200"
+        android:title="@string/menu_add_profile" />
+    <item
+        android:id="@+id/action_settings6"
+        android:orderInCategory="200"
+        android:title="@string/menu_setting_notification" />
+    <item
+        android:id="@+id/action_settings7"
+        android:orderInCategory="200"
+        android:title="@string/menu_list_of_insurance_companies" />
+    <item
+        android:id="@+id/action_settings8"
+        android:orderInCategory="200"
+        android:title="@string/menu_list_of_cards" />
+    <item
+        android:id="@+id/action_settings9"
+        android:orderInCategory="200"
+        android:title="@string/menu_important_notice" />
+    <item
+        android:id="@+id/action_settings10"
+        android:orderInCategory="200"
+        android:title="@string/menu_version" />
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="200"
+        android:title="@string/menu_logout" />
+</menu>

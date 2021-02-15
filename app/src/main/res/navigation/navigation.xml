@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/inCaseOfFragment">
+
+    <fragment
+        android:id="@+id/inCaseOfFragment"
+        android:name="jp.co.integrityworks.prototype.ui.incaseof.InCaseOfFragment"
+        android:label="fragment_title_screen"
+        tools:layout="@layout/in_case_of_fragment">
+        <action
+            android:id="@+id/action_to_incase"
+            app:destination="@id/inCaseOfFragment" />
+        <action
+            android:id="@+id/action_to_contract"
+            app:destination="@id/contractFragment" />
+        <action
+            android:id="@+id/action_to_notice"
+            app:destination="@id/noticeFragment" />
+        <action
+            android:id="@+id/action_to_help"
+            app:destination="@id/helpFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/contractFragment"
+        android:name="jp.co.integrityworks.prototype.ui.contract.InForceContractFragment"
+        android:label="in_case_of_fragment"
+        tools:layout="@layout/in_case_of_fragment">
+        <action
+            android:id="@+id/action_to_incase"
+            app:destination="@id/inCaseOfFragment" />
+        <action
+            android:id="@+id/action_to_contract"
+            app:destination="@id/contractFragment" />
+        <action
+            android:id="@+id/action_to_notice"
+            app:destination="@id/noticeFragment" />
+        <action
+            android:id="@+id/action_to_help"
+            app:destination="@id/helpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noticeFragment"
+        android:name="jp.co.integrityworks.prototype.ui.NoticeFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help">
+        <action
+            android:id="@+id/action_to_incase"
+            app:destination="@id/inCaseOfFragment" />
+        <action
+            android:id="@+id/action_to_contract"
+            app:destination="@id/contractFragment" />
+        <action
+            android:id="@+id/action_to_notice"
+            app:destination="@id/noticeFragment" />
+        <action
+            android:id="@+id/action_to_help"
+            app:destination="@id/helpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="jp.co.integrityworks.prototype.ui.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help">
+        <action
+            android:id="@+id/action_to_incase"
+            app:destination="@id/inCaseOfFragment" />
+        <action
+            android:id="@+id/action_to_contract"
+            app:destination="@id/contractFragment" />
+        <action
+            android:id="@+id/action_to_notice"
+            app:destination="@id/noticeFragment" />
+        <action
+            android:id="@+id/action_to_help"
+            app:destination="@id/helpFragment" />
+    </fragment>
+
+
+</navigation>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="insurance"
+            type="jp.co.integrityworks.prototype.db.entity.Insurance" />
+
+        <variable
+            name="callback"
+            type="jp.co.integrityworks.prototype.ui.contract.InForceContractCallback" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/detailContractCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_middle"
+            android:onClick="@{() ->  callback.onClick(insurance)}"
+            android:padding="@dimen/margin_small"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_middle"
+                android:layout_marginEnd="@dimen/margin_middle"
+                android:paddingTop="@dimen/margin_middle"
+                android:paddingBottom="@dimen/margin_large">
+
+                <ImageView
+                    android:id="@+id/contractImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_middle"
+                    android:layout_marginTop="@dimen/margin_middle"
+                    android:layout_marginEnd="@dimen/margin_xlarge"
+                    android:layout_marginBottom="@dimen/margin_middle"
+                    android:contentDescription="@string/text_none"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/etc" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_xlarge"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@{insurance.insuranceCompanyName}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toEndOf="@+id/contractImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_xlarge"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@{insurance.insuranceTypeName}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toEndOf="@+id/contractImageView"
+                    app:layout_constraintTop_toBottomOf="@+id/name" />
+
+                <ImageView
+                    android:id="@+id/detailContractImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:contentDescription="@string/text_none"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small"
+                    app:layout_constraintBottom_toTopOf="@+id/lineView3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/arrow_right" />
+
+                <View
+                    android:id="@+id/lineView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_middle"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/contractImageView" />
+
+                <TextView
+                    android:id="@+id/name3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/text_policy_number"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lineView3" />
+
+                <TextView
+                    android:id="@+id/name4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@{insurance.policyNumber}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toEndOf="@+id/name3"
+                    app:layout_constraintStart_toStartOf="@+id/name"
+                    app:layout_constraintTop_toBottomOf="@id/lineView3" />
+
+                <View
+                    android:id="@+id/lineView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/name3" />
+
+                <TextView
+                    android:id="@+id/name5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/text_car_name"
+                    android:textColor="@color/colorTextBase"
+                    android:visibility='@{insurance.insuranceTypeCode.equals("automobile") ? View.VISIBLE : View.GONE}'
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lineView4" />
+
+                <TextView
+                    android:id="@+id/name6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@{insurance.carName}"
+                    android:textColor="@color/colorTextBase"
+                    android:visibility='@{insurance.insuranceTypeCode.equals("automobile") ? View.VISIBLE : View.GONE}'
+                    app:layout_constraintStart_toEndOf="@+id/name5"
+                    app:layout_constraintStart_toStartOf="@+id/name"
+                    app:layout_constraintTop_toBottomOf="@id/lineView4" />
+
+                <View
+                    android:id="@+id/lineView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:background="@android:color/darker_gray"
+                    android:visibility='@{insurance.insuranceTypeCode.equals("automobile") ? View.VISIBLE : View.GONE}'
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/name5" />
+
+                <TextView
+                    android:id="@+id/name7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/text_registration_number"
+                    android:textColor="@color/colorTextBase"
+                    android:visibility='@{insurance.insuranceTypeCode.equals("automobile") ? View.VISIBLE : View.GONE}'
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lineView5" />
+
+                <TextView
+                    android:id="@+id/name8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@{insurance.registNumber}"
+                    android:textColor="@color/colorTextBase"
+                    android:visibility='@{insurance.insuranceTypeCode.equals("automobile") ? View.VISIBLE : View.GONE}'
+                    app:layout_constraintStart_toEndOf="@+id/name7"
+                    app:layout_constraintStart_toStartOf="@+id/name"
+                    app:layout_constraintTop_toBottomOf="@id/lineView5" />
+
+                <View
+                    android:id="@+id/lineView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:background="@android:color/darker_gray"
+                    android:visibility='@{insurance.insuranceTypeCode.equals("automobile") ? View.VISIBLE : View.GONE}'
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/name7" />
+
+                <TextView
+                    android:id="@+id/name9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/text_maturity_date"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lineView6" />
+
+                <TextView
+                    android:id="@+id/name10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@{insurance.maturityDate}"
+                    android:textColor="@color/colorTextBase"
+                    app:layout_constraintStart_toEndOf="@+id/name9"
+                    app:layout_constraintStart_toStartOf="@+id/name"
+                    app:layout_constraintTop_toBottomOf="@id/lineView6" />
+
+                <View
+                    android:id="@+id/lineView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_middle"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/name9" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+</layout>

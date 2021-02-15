@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/margin_xlarge"
+    android:layout_marginEnd="@dimen/margin_xlarge"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/loginTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:text="@string/app_title2"
+        android:textColor="@color/colorTextTitlePortal"
+        android:textSize="@dimen/title_size_large" />
+
+    <AutoCompleteTextView
+        android:id="@+id/userId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_middle"
+        android:background="@android:color/white"
+        android:hint="@string/hint_id"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:padding="@dimen/margin_middle"
+        android:singleLine="true"
+        android:textColor="@color/colorTextBase"
+        android:textColorHint="@color/colorGray"
+        android:textSize="@dimen/text_size_normal" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_middle"
+        android:background="@android:color/white"
+        android:hint="@string/hint_password"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:padding="@dimen/margin_middle"
+        android:singleLine="true"
+        android:textColor="@color/colorTextBase"
+        android:textColorHint="@color/colorGray"
+        android:textSize="@dimen/text_size_normal"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/email_sign_in_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_middle"
+        android:background="@drawable/button_state"
+        android:text="@string/action_sign_in"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/forget_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/text_forget"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/sns_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_middle"
+        android:layout_marginTop="@dimen/margin_xxlarge"
+        android:layout_marginEnd="@dimen/margin_middle"
+        android:text="@string/text_sns"
+        android:textColor="@color/colorTextBase" />
+
+    <!--<com.facebook.login.widget.LoginButton-->
+    <Button
+        android:id="@+id/sns_fb_button"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_middle"
+        android:background="@drawable/com_facebook_button_background"
+        android:drawableStart="@drawable/facebook"
+        android:paddingStart="@dimen/margin_small"
+        android:paddingEnd="@dimen/margin_small"
+        android:text="@string/text_facebook" />
+
+    <Button
+        android:id="@+id/sns_tw_button"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_middle"
+        android:background="@color/tw__composer_blue"
+        android:drawableStart="@drawable/tw__composer_logo_white"
+        android:paddingStart="@dimen/margin_small"
+        android:paddingEnd="@dimen/margin_small"
+        android:text="@string/text_twitter" />
+
+    <Button
+        android:id="@+id/sns_li_button"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_middle"
+        android:background="@drawable/btn_login_base"
+        android:text="@string/text_line" />
+</LinearLayout>

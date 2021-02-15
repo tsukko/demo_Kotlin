@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_middle"
+                android:padding="@dimen/margin_small"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_middle">
+
+                    <TextView
+                        android:id="@+id/cardTitleTextView1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/darker_gray"
+                        android:padding="@dimen/margin_middle"
+                        android:text="あ"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/cardTextView1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="XXXXXカード"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardTitleTextView1" />
+
+                    <ImageView
+                        android:id="@+id/cardImageView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="8dp"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintBottom_toBottomOf="@+id/cardTextView1"
+                        app:layout_constraintEnd_toEndOf="@+id/cardTextView1"
+                        app:layout_constraintTop_toTopOf="@+id/cardTextView1"
+                        app:srcCompat="@drawable/arrow_right" />
+
+                    <View
+                        android:id="@+id/cardLineView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardTextView1" />
+
+                    <TextView
+                        android:id="@+id/cardTextView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="XXXXXカード"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardTextView1" />
+
+                    <ImageView
+                        android:id="@+id/cardImageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="8dp"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintBottom_toBottomOf="@+id/cardTextView2"
+                        app:layout_constraintEnd_toEndOf="@+id/cardTextView2"
+                        app:layout_constraintTop_toTopOf="@+id/cardTextView2"
+                        app:srcCompat="@drawable/arrow_right" />
+
+                    <TextView
+                        android:id="@+id/cardTitleTextView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/darker_gray"
+                        android:padding="@dimen/margin_middle"
+                        android:text="い"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardTextView2" />
+
+                    <TextView
+                        android:id="@+id/cardTextView3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_middle"
+                        android:text="XXXXXカード"
+                        android:textColor="@color/colorTextBase"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cardTitleTextView2" />
+
+                    <ImageView
+                        android:id="@+id/cardImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="8dp"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintBottom_toBottomOf="@+id/cardTextView3"
+                        app:layout_constraintEnd_toEndOf="@id/cardTextView3"
+                        app:layout_constraintTop_toTopOf="@+id/cardTextView3"
+                        app:srcCompat="@drawable/arrow_right" />
+
+                    <View
+                        android:id="@+id/cardLineView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardTextView3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</layout>
